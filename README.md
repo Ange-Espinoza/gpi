@@ -1,3 +1,5 @@
+https://ange-espinoza.github.io/gpi/
+
 En GPI somos especialistas en comunicación estratégica para la industria, impulsando el posicionamiento, la visibilidad y la reputación de nuestros clientes.
 
 Con más de 15 años de experiencia, acompañamos a organizaciones de distintos rubros industriales en la gestión de comunicaciones críticas, la creación de contenido técnico y el desarrollo de soluciones audiovisuales que destacan en mercados altamente competitivos.
