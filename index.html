@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GPI</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            /* -------------------------
+       RESET + BASE
+    ------------------------- */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: system-ui, sans-serif;
+            }
+
+            body {
+                background: #fff;
+                color: #111;
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            /* -------------------------
+       NAVBAR (Glass)
+    ------------------------- */
+            header {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 999;
+
+                background: rgba(10, 30, 80, 0.35);
+                backdrop-filter: blur(14px);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            }
+
+            /* FULL WIDTH NAVBAR */
+            nav {
+                width: 100%;
+                padding: 18px 60px; /* espacio con bordes */
+
+                display: flex;
+                justify-content: space-between; /* logo izq / menú der */
+                align-items: center;
+            }
+
+            /* LOGO pegado a la izquierda */
+            .logo {
+                font-weight: 700;
+                font-size: 18px;
+                color: white;
+            }
+
+            /* TODO lo demás a la derecha */
+            .nav-right {
+                display: flex;
+                align-items: center;
+                gap: 35px;
+            }
+
+            /* Links */
+            .nav-links {
+                display: flex;
+                gap: 26px;
+            }
+
+            .nav-links a {
+                color: white;
+                opacity: 0.85;
+                font-size: 15px;
+                transition: 0.2s;
+            }
+
+            .nav-links a:hover {
+                opacity: 1;
+            }
+
+            /* CTA */
+            .cta-nav {
+                background: #f661f2;
+                padding: 12px 22px;
+                border-radius: 12px;
+                font-weight: 600;
+                color: white;
+                white-space: nowrap;
+            }
+
+            .cta-nav:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+            }
+
+            /* -------------------------
+       HERO SECTION
+    ------------------------- */
+            .hero {
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                padding: 120px 20px 60px;
+
+                background: linear-gradient(rgba(10, 40, 120, 0.82), rgba(5, 20, 60, 0.92)),
+                    url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1800&q=80");
+                background-size: cover;
+                background-position: center;
+                color: white;
+            }
+
+            .hero-content {
+                max-width: 900px;
+            }
+
+            .hero h1 {
+                font-family: "Space Grotesk", sans-serif;
+                font-size: 68px;
+                font-weight: 700;
+                line-height: 1.05;
+                margin-bottom: 18px;
+            }
+
+            .hero h1 span {
+                color: #6aa6ff;
+                font-weight: inherit;
+            }
+
+            .hero p {
+                font-size: 20px;
+                opacity: 0.9;
+                margin-bottom: 40px;
+                line-height: 1.6;
+            }
+
+            /* -------------------------
+       HERO BUTTONS
+    ------------------------- */
+            .hero-buttons {
+                display: flex;
+                justify-content: center;
+                gap: 18px;
+                flex-wrap: wrap;
+            }
+
+            .btn {
+                padding: 16px 28px;
+                border-radius: 12px;
+                font-weight: 600;
+                font-size: 16px;
+                transition: 0.25s;
+                border: none;
+                cursor: pointer;
+            }
+
+            .btn-primary {
+                background: #ff7a00;
+                color: white;
+            }
+
+            .btn-primary:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+            }
+
+            .btn-secondary {
+                background: white;
+                color: #0a2b70;
+            }
+
+            .btn-secondary:hover {
+                transform: translateY(-3px);
+                background: #f2f2f2;
+            }
+
+            /* -------------------------
+       SCROLL CUE
+    ------------------------- */
+            .scroll {
+                margin-top: 55px;
+                font-size: 13px;
+                letter-spacing: 2px;
+                opacity: 0.75;
+            }
+
+            .arrow {
+                margin-top: 10px;
+                font-size: 22px;
+                animation: bounce 1.4s infinite;
+            }
+
+            @keyframes bounce {
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(8px);
+                }
+            }
+            .services {
+                padding: 110px 60px;
+                background: #f8f9fc;
+            }
+
+            .services-header {
+                text-align: center;
+                max-width: 900px;
+                margin: 0 auto 70px auto;
+            }
+
+            /* Tag azul arriba */
+            .section-tag {
+                display: inline-block;
+                background: #1e5bff;
+                color: white;
+                font-size: 13px;
+                font-weight: 700;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+
+                padding: 12px 22px;
+                margin-bottom: 28px;
+            }
+
+            /* Título gigante */
+            .services-header h2 {
+                font-size: 72px;
+                font-weight: 900;
+                margin-bottom: 25px;
+                color: black;
+                line-height: 1.05;
+            }
+
+            /* Subtítulo */
+            .services-header p {
+                font-size: 22px;
+                line-height: 1.6;
+                color: #444;
+                max-width: 750px;
+                margin: 0 auto;
+            }
+
+            /* Desktop */
+            .services-grid {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                gap: 32px;
+            }
+
+            /* CARD base */
+            .service-card {
+                position: relative;
+                background: white;
+                padding: 45px 35px;
+                border: 1px solid rgba(0, 0, 0, 0.08);
+                transition: 0.3s ease;
+                overflow: hidden;
+                /* Cards normales (fila 1) */
+                grid-column: span 2;
+            }
+
+            /* Cards grandes (fila 2) */
+            .service-card:nth-child(4),
+            .service-card:nth-child(5) {
+                grid-column: span 3;
+            }
+
+            /* Card 6 delgadita tipo banda */
+            .service-card:nth-child(6) {
+                grid-column: span 6;
+                background: #0a2b70;
+                color: white;
+                padding: 28px 40px;
+                display: flex;
+                align-items: center;
+                gap: 25px;
+
+                min-height: auto;
+            }
+
+            .service-card:nth-child(6) .service-icon {
+                margin-bottom: 0;
+                flex-shrink: 0;
+            }
+            .service-card:nth-child(6) h3 {
+                font-size: 22px;
+                margin-bottom: 4px;
+                color: white;
+            }
+
+            .service-card:nth-child(6) span {
+                margin-bottom: 0;
+                color: rgb(0, 228, 255);
+            }
+
+            .service-card:nth-child(6) p {
+                margin-top: 6px;
+                max-width: 700px;
+                color: rgba(255, 255, 255, 0.85);
+            }
+
+            /* Esquina decorativa */
+            .service-card::before {
+                content: "";
+                position: absolute;
+                top: -1px;
+                left: -1px;
+                width: 55px;
+                height: 55px;
+                border-top: 5px solid currentColor;
+                border-left: 5px solid currentColor;
+            }
+
+            /* Caja del ícono */
+            .service-icon {
+                width: 65px;
+                height: 65px;
+                border: 2px solid currentColor;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 25px;
+
+                background: transparent;
+                transition: 0.3s ease;
+            }
+
+            .service-icon img {
+                width: 28px;
+                height: 28px;
+                transition: 0.3s ease;
+            }
+
+            /* Título */
+            .service-card h3 {
+                font-size: 26px;
+                font-weight: 800;
+                margin-bottom: 10px;
+                color: black;
+            }
+
+            /* Subtítulo */
+            .service-card span {
+                font-size: 13px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-weight: 600;
+                display: block;
+                margin-bottom: 20px;
+                color: currentColor;
+            }
+
+            /* Texto */
+            .service-card p {
+                font-size: 16px;
+                line-height: 1.6;
+                color: #444;
+            }
+
+            /* Hover premium */
+            .service-card:hover .service-icon {
+                border-color: transparent;
+                background: currentColor;
+            }
+
+            .service-card:hover .service-icon img {
+                filter: brightness(0) invert(1);
+            }
+
+            .service-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+            }
+
+            /* Colores */
+            .service-card.blue {
+                color: #1e5bff;
+            }
+
+            .service-card.pink {
+                color: #ff3fa6;
+            }
+
+            .service-card.orange {
+                color: #ff7a00;
+            }
+
+            .service-card:nth-child(4),
+            .service-card:nth-child(5) {
+                justify-self: stretch;
+            }
+            @media (max-width: 1100px) {
+                .services-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                .service-card {
+                    grid-column: span 1 !important;
+                }
+            }
+            @media (max-width: 700px) {
+                .services-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- NAVBAR -->
+        <header>
+            <nav>
+                <div class="logo">GPI</div>
+
+                <div class="nav-right">
+                    <div class="nav-links">
+                        <a href="#">Servicios</a>
+                        <a href="#">Proyectos</a>
+                        <a href="#">Metodología</a>
+                        <a href="#">Contacto</a>
+                    </div>
+
+                    <a class="cta-nav" href="#">Conversemos</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Comunicación estratégica <span>para la industria</span></h1>
+
+                <p>
+                    Impulsamos el posicionamiento, la visibilidad y la reputación de nuestros clientes mediante un
+                    ecosistema de
+                    <b>servicios comunicacionales, medios propios, multimedia y eventos.</b>
+                </p>
+
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Cotizar campaña</button>
+                    <button class="btn btn-secondary">Ver productos</button>
+                    <button class="btn btn-secondary">Descargar Media Kit</button>
+                </div>
+
+                <div>
+                    <p></p>
+                </div>
+
+                <div class="scroll">
+                    DESLIZA
+                    <div class="arrow">⌄</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="servicios">
+            <div class="services-header">
+                <div class="section-tag">NUESTROS SERVICIOS</div>
+
+                <h2>Soluciones integradas</h2>
+
+                <p>Servicios de comunicación diseñados para hacer crecer tu marca</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- CARD 1 -->
+                <div class="service-card blue">
+                    <div class="service-icon">
+                        <img src="icons/1.svg" alt="Desarrollo web" />
+                    </div>
+                    <h3>Agencia de comunicaciones</h3>
+                    <span>+ REDES</span>
+                    <p>
+                        Impulsamos tu marca mediante estrategias comunicacionales diseñadas a medida. Hacemos que tu
+                        empresa destaque, se posicione y conecte con los públicos objetivos.
+                    </p>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="service-card pink">
+                    <div class="service-icon">
+                        <img src="icons/2.svg" alt="Producción audiovisual" />
+                    </div>
+                    <h3>Desarrollo web</h3>
+                    <span>+ OPTIMIZACIÓN Y RESULTADOS</span>
+                    <p>
+                        Creamos sitios web profesionales, optimizados y orientados a resultados. Posicionamos
+                        digitalmente tu empresa para aumentar su visibilidad y alcance, realizando métricas y
+                        seguimientos para la elaboración de una correcta estrategia digital.
+                    </p>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="service-card blue">
+                    <div class="service-icon">
+                        <img src="icons/3.svg" alt="Estrategia digital" />
+                    </div>
+                    <h3>Multimedia</h3>
+                    <span>+ POSIBILIDADES</span>
+                    <p>
+                        Producimos videos publicitarios, piezas gráficas, contenido digital y material corporativo de
+                        alto nivel que fortalece tu presencia y te diferencia en un mercado competitivo.
+                    </p>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="service-card orange">
+                    <div class="service-icon">
+                        <img src="icons/4.svg" alt="Diseño gráfico" />
+                    </div>
+                    <h3>Editorial</h3>
+                    <span>+ FORMATOS</span>
+                    <p>
+                        Desarrollamos medios de comunicación como revistas y un periodico, boletines, informes y
+                        publicaciones corporativas que transmiten mensajes con claridad, estilo y enfoque estratégico
+                        acorde al relacionamiento de tu marca con tus clientes.
+                    </p>
+                </div>
+
+                <!-- CARD 5 -->
+                <div class="service-card blue">
+                    <div class="service-icon">
+                        <img src="icons/5.svg" alt="Eventos y experiencias" />
+                    </div>
+                    <h3>Organización de eventos</h3>
+                    <span>+ REUNIÓN</span>
+                    <p>
+                        Organizamos diferentes encuentros de proveedores de alto nivel, centrados en innovación, mejores
+                        prácticas, tecnología y excelencia operacional. Nuestros eventos reúnen a líderes del sector
+                        minero, especialistas y proveedores clave, generando networking efectivo y grandes oportunidades
+                        para el desarrollo del sector industrial.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+    </body>
+</html>
