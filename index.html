@@ -51,10 +51,10 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                max-width: 1300px; /* Evita que se estire demasiado */
+                max-width: 1300px;
                 margin: 0 auto;
-                padding: 15px 30px; /* Padding más conservador */
-                height: 80px; /* Altura fija para evitar saltos */
+                padding: 0 5%; /* Padding lateral */
+                height: 80px;
             }
 
             /* LOGO pegado a la izquierda */
@@ -107,14 +107,15 @@
        HERO SECTION
     ------------------------- */
             .hero {
-                height: 100vh;
+                min-height: 100vh;
+                height: auto; /* Permite que crezca si el texto es mucho */
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 text-align: center;
-
-                padding: 120px 20px 60px;
-
+                padding: 120px 5% 60px; /* Más espacio arriba para el navbar */
+                box-sizing: border-box;
                 background: linear-gradient(rgba(10, 40, 120, 0.82), rgba(5, 20, 60, 0.92)),
                     url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1800&q=80");
                 background-size: cover;
@@ -122,16 +123,14 @@
                 color: white;
             }
 
-            .hero-content {
-                max-width: 900px;
-            }
-
+            /* Ajuste de fuentes para que no se rompa el diseño */
             .hero h1 {
                 font-family: "Space Grotesk", sans-serif;
-                font-size: 68px;
+                font-size: clamp(32px, 8vw, 68px); /* Tamaño fluido: mínimo 32px, máximo 68px */
                 font-weight: 700;
-                line-height: 1.05;
-                margin-bottom: 18px;
+                line-height: 1.1;
+                margin-bottom: 20px;
+                max-width: 900px;
             }
 
             .hero h1 span {
@@ -410,6 +409,30 @@
                 justify-self: stretch;
             }
             @media (max-width: 600px) {
+                .hero {
+                    padding-top: 120px; /* Ajuste fino del espacio superior */
+                }
+
+                .hero h1 {
+                    font-size: 32px !important; /* Tamaño manejable para celular */
+                    line-height: 1.2;
+                }
+
+                .hero p {
+                    font-size: 16px !important;
+                    margin-bottom: 30px;
+                }
+
+                .hero-buttons {
+                    flex-direction: column; /* Botones uno sobre otro en móviles */
+                    width: 100%;
+                    max-width: 300px;
+                    margin: 0 auto;
+                }
+
+                .btn {
+                    width: 100%; /* Botones a lo ancho del cel */
+                }
                 .feature-item {
                     flex-direction: row;
                     gap: 15px;
@@ -535,7 +558,19 @@
                     flex-direction: column;
                     gap: 50px;
                     padding: 80px 40px;
-                    text-align: center;
+                    text-align: left;
+                }
+
+                @media (max-width: 850px) {
+                    .nav-links {
+                        display: none; /* Oculta los links en móvil para que no choquen con el logo */
+                    }
+                }
+
+                @media (max-width: 1024px) {
+                    .hero h1 {
+                        font-size: 48px !important; /* Bajamos de 68px a 48px */
+                    }
                 }
 
                 .feature-item {
@@ -544,6 +579,51 @@
 
                 .about-left {
                     max-width: 100%;
+                }
+
+                .espacio-extra {
+                    height: 10px;
+                }
+
+                p {
+                    margin-bottom: 1px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                /* Ajustes para el Hero */
+                .hero {
+                    padding-top: 100px;
+                }
+
+                .hero-buttons {
+                    display: flex;
+                    justify-content: center; /* Centra horizontalmente si están en fila */
+                    align-items: center; /* Centra si tienen diferentes altos */
+                    gap: 18px;
+                    flex-wrap: wrap;
+                    width: 100%; /* Ocupa todo el ancho para que el center funcione */
+                    max-width: 600px; /* Evita que los botones se dispersen demasiado */
+                    margin: 0 auto; /* Centra el bloque completo respecto al Hero */
+                }
+
+                .btn {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                /* Ajustes para la sección About (¿Quiénes somos?) */
+                .about {
+                    padding: 60px 20px;
+                    gap: 40px;
+                }
+
+                .about-left h2 {
+                    font-size: 36px; /* Título más pequeño en móvil */
+                }
+
+                .feature-item {
+                    padding: 15px; /* Menos padding para ganar espacio lateral */
                 }
             }
         </style>
@@ -599,10 +679,27 @@
         <section class="about">
             <div class="about-left">
                 <div class="section-tag2"></div>
-                <h2>La comunicación es una herramienta que inspira, moviliza y genera resultados</h2>
+                <h2>¿Quiénes somos?</h2>
                 <p>
-                    En <strong>GPI - Grupo Periodístico Industrial</strong>, integramos una oferta completa de servicios
-                    de comunicación para ayudar a las marcas a crecer con claridad, estrategia y propósito.
+                    En GPI somos especialistas en comunicación estratégica para la industria, impulsando el
+                    posicionamiento, la visibilidad y la reputación de nuestros clientes.
+                </p>
+                <div class="espacio-extra"></div>
+                <p>
+                    Acompañamos a organizaciones de distintos rubros industriales en la gestión de comunicaciones
+                    críticas, la creación de contenido técnico y el desarrollo de soluciones audiovisuales que destacan
+                    en mercados altamente competitivos.
+                </p>
+                <div class="espacio-extra"></div>
+                <p>
+                    Dentro de nuestra trayectoria, destacan iniciativas vinculadas a minería como Intecmin y Desafíos de
+                    la minería, orientadas a difundir innovaciones, promover buenas prácticas y conectar a líderes y
+                    actores relevantes del ecosistema.
+                </p>
+                <div class="espacio-extra"></div>
+                <p>
+                    Generamos una presencia efectiva en los canales adecuados y entregamos comunicaciones estratégicas
+                    con énfasis en el marketing relacional.
                 </p>
                 <button class="btn btn-primary">Conoce más sobre nosotros</button>
             </div>
@@ -613,28 +710,25 @@
                         <span>↗</span>
                     </div>
                     <div class="feature-text">
-                        <h4>Crecimiento sostenido</h4>
-                        <p>Alianzas de largo plazo que generan resultados medibles</p>
+                        <h4>Más de 15 años de experiencia</h4>
                     </div>
                 </div>
 
                 <div class="feature-item">
                     <div class="feature-icon-box">
-                        <span>⚓</span>
+                        <span>↗</span>
                     </div>
                     <div class="feature-text">
-                        <h4>Experiencia comprobada</h4>
-                        <p>Más de 15 años conectando marcas con sus públicos</p>
+                        <h4>Producimos seminarios y eventos sectoriales de alto impacto</h4>
                     </div>
                 </div>
 
                 <div class="feature-item">
                     <div class="feature-icon-box">
-                        <span>◎</span>
+                        <span>↗</span>
                     </div>
                     <div class="feature-text">
-                        <h4>Estrategia con propósito</h4>
-                        <p>Cada acción comunicacional tiene un objetivo claro</p>
+                        <h4>Nuestro propósito es potenciar la marca de cada cliente</h4>
                     </div>
                 </div>
             </div>
@@ -642,11 +736,11 @@
 
         <section class="services" id="servicios">
             <div class="services-header">
-                <div class="section-tag">NUESTROS SERVICIOS</div>
+                <div class="section-tag">Soluciones integradas</div>
 
-                <h2>Soluciones integradas</h2>
+                <h2>Nuestros servicios</h2>
 
-                <p>Servicios de comunicación diseñados para hacer crecer tu marca</p>
+                <p>¡Selecciona un servicio y te enviamos alcances y propuesta!</p>
             </div>
 
             <div class="services-grid">
