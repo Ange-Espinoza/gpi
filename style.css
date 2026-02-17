@@ -41,10 +41,8 @@ nav {
     height: 80px;
 }
 
-.logo {
-    font-weight: 700;
-    font-size: 18px;
-    color: white;
+.logo img {
+    height: 40px;
 }
 
 .nav-right {
