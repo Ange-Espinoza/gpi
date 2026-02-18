@@ -17,59 +17,88 @@
 
     <body>
         <!-- NAVBAR -->
-        <header>
+        <header id="main-header">
+            <!-- TOPBAR -->
+            <div class="topbar" id="topbar">
+                <div class="topbar-inner">
+                    <!-- REDES -->
+                    <div class="topbar-socials">
+                        <a href="https://www.facebook.com/AMagazineRevista/" target="_blank" rel="noopener noreferrer">
+                            <img src="icons/facebook.svg" alt="Facebook" />
+                        </a>
+
+                        <a
+                            href="https://www.linkedin.com/company/grupo-periodístico-industrial/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img src="icons/linkedin.svg" alt="LinkedIn" />
+                        </a>
+
+                        <a href="https://www.instagram.com/gpi_producciones/" target="_blank" rel="noopener noreferrer">
+                            <img src="icons/instagram.svg" alt="Instagram" />
+                        </a>
+                    </div>
+
+                    <!-- CONTACTO -->
+                    <div class="topbar-right">
+                        <span>contacto@gpipsa.cl</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NAVBAR PRINCIPAL -->
             <nav>
-                <div class="logo"><img src="icons/logogpi1.svg" alt="Logotipo de la agencia" /></div>
+                <div class="logo">
+                    <img src="icons/logogpi1.svg" alt="Logotipo de la agencia" />
+                </div>
 
                 <div class="nav-right">
                     <div class="nav-links">
-                        <a href="#">Servicios</a>
-                        <a href="#">Proyectos</a>
-                        <a href="#">Metodología</a>
-                        <a href="#">Contacto</a>
+                        <a href="#servicios">Servicios</a>
+                        <a href="#proyectos">Proyectos</a>
+                        <a href="#metodologia">Metodología</a>
+                        <a href="#contacto">Contacto</a>
                     </div>
 
-                    <a class="cta-nav" href="#">Conversemos</a>
+                    <a class="cta-nav" href="#contacto">Conversemos</a>
                 </div>
             </nav>
         </header>
 
         <!-- HERO -->
-        <section class="hero">
+        <section class="hero" id="hero">
+            <!-- VIDEO BACKGROUND -->
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="video/agencia.mp4" type="video/mp4" />
+                Tu navegador no soporta videos HTML5.
+            </video>
 
-    <!-- VIDEO BACKGROUND -->
-    <video autoplay muted loop playsinline class="hero-video">
-        <source src="video/agencia.mp4" type="video/mp4">
-        Tu navegador no soporta videos HTML5.
-    </video>
+            <!-- OVERLAY OSCURO + AZUL -->
+            <div class="hero-overlay"></div>
 
-    <!-- OVERLAY OSCURO + AZUL -->
-    <div class="hero-overlay"></div>
+            <!-- CONTENIDO -->
+            <div class="hero-content">
+                <h1>Comunicación estratégica <span>para la industria</span></h1>
 
-    <!-- CONTENIDO -->
-    <div class="hero-content">
-        <h1>Comunicación estratégica <span>para la industria</span></h1>
+                <p>
+                    Impulsamos el posicionamiento, la visibilidad y la reputación de nuestros clientes mediante un
+                    ecosistema de
+                    <b>servicios comunicacionales, medios propios, multimedia y eventos.</b>
+                </p>
 
-        <p>
-            Impulsamos el posicionamiento, la visibilidad y la reputación de nuestros clientes mediante un
-            ecosistema de
-            <b>servicios comunicacionales, medios propios, multimedia y eventos.</b>
-        </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Cotizar campaña</button>
+                    <button class="btn btn-secondary">Ver productos</button>
+                    <button class="btn btn-secondary">Descargar Media Kit</button>
+                </div>
 
-        <div class="hero-buttons">
-            <button class="btn btn-primary">Cotizar campaña</button>
-            <button class="btn btn-secondary">Ver productos</button>
-            <button class="btn btn-secondary">Descargar Media Kit</button>
-        </div>
-
-        <div class="scroll">
-            DESLIZA
-            <div class="arrow">⌄</div>
-        </div>
-    </div>
-
-</section>
-
+                <div class="scroll">
+                    DESLIZA
+                    <div class="arrow">⌄</div>
+                </div>
+            </div>
+        </section>
 
         <section class="about">
             <div class="about-left">
@@ -140,36 +169,33 @@
 
             <div class="services-grid">
                 <!-- CARD 1 -->
-              
-<div class="service-card blue">
 
-  <!-- FOTO ARRIBA -->
-  <div class="service-media">
-    <img src="images/servicios/comunicaciones.jpg" alt="Agencia de comunicaciones">
-  </div>
+                <div class="service-card blue">
+                    <!-- FOTO ARRIBA -->
+                    <div class="service-media">
+                        <img src="images/servicios/comunicaciones.jpg" alt="Agencia de comunicaciones" />
+                    </div>
 
-  <!-- ICONO -->
-  <div class="service-icon">
-    <img src="icons/1.svg" alt="">
-  </div>
+                    <!-- ICONO -->
+                    <div class="service-icon">
+                        <img src="icons/1.svg" alt="" />
+                    </div>
 
-  <h3>Agencia de comunicaciones</h3>
-  <span>+ REDES</span>
+                    <h3>Agencia de comunicaciones</h3>
+                    <span>+ REDES</span>
 
-  <p>
-    Impulsamos tu marca mediante estrategias comunicacionales diseñadas a medida.
-    Hacemos que tu empresa destaque, se posicione y conecte con los públicos objetivos.
-  </p>
-
-</div>
-
+                    <p>
+                        Impulsamos tu marca mediante estrategias comunicacionales diseñadas a medida. Hacemos que tu
+                        empresa destaque, se posicione y conecte con los públicos objetivos.
+                    </p>
+                </div>
 
                 <!-- CARD 2 -->
                 <div class="service-card pink">
-                      <!-- FOTO ARRIBA -->
-  <div class="service-media">
-    <img src="images/servicios/web.jpg" alt="Agencia de comunicaciones">
-  </div>
+                    <!-- FOTO ARRIBA -->
+                    <div class="service-media">
+                        <img src="images/servicios/web.jpg" alt="Agencia de comunicaciones" />
+                    </div>
 
                     <div class="service-icon">
                         <img src="icons/2.svg" alt="Producción audiovisual" />
@@ -185,10 +211,10 @@
 
                 <!-- CARD 3 -->
                 <div class="service-card blue">
-                      <!-- FOTO ARRIBA -->
-  <div class="service-media">
-    <img src="images/servicios/multimedia.jpg" alt="Agencia de comunicaciones">
-  </div>
+                    <!-- FOTO ARRIBA -->
+                    <div class="service-media">
+                        <img src="images/servicios/multimedia.jpg" alt="Agencia de comunicaciones" />
+                    </div>
 
                     <div class="service-icon">
                         <img src="icons/3.svg" alt="Estrategia digital" />
@@ -203,10 +229,10 @@
 
                 <!-- CARD 4 -->
                 <div class="service-card orange">
-                      <!-- FOTO ARRIBA -->
-  <div class="service-media">
-    <img src="images/servicios/editorial.jpg" alt="Agencia de comunicaciones">
-  </div>
+                    <!-- FOTO ARRIBA -->
+                    <div class="service-media">
+                        <img src="images/servicios/editorial.jpg" alt="Agencia de comunicaciones" />
+                    </div>
 
                     <div class="service-icon">
                         <img src="icons/4.svg" alt="Diseño gráfico" />
@@ -221,11 +247,11 @@
                 </div>
 
                 <!-- CARD 5 -->
-                 <div class="service-card blue">
-                      <!-- FOTO ARRIBA -->
-  <div class="service-media">
-    <img src="images/servicios/eventos.jpg" alt="Agencia de comunicaciones">
-  </div>
+                <div class="service-card blue">
+                    <!-- FOTO ARRIBA -->
+                    <div class="service-media">
+                        <img src="images/servicios/eventos.jpg" alt="Agencia de comunicaciones" />
+                    </div>
 
                     <div class="service-icon">
                         <img src="icons/5.svg" alt="Diseño gráfico" />
@@ -241,74 +267,89 @@
                 </div>
             </div>
         </section>
-        
+
         <section class="projects">
-    <div class="projects-header">
-        <div class="section-tag">Casos reales</div>
-        <h2>Clientes destacados </h2>
-    </div>
-
-    <div class="projects-grid">
-        <!-- Proyecto 1 -->
-        <article class="project-card">
-            <img src="projects/proyecto-1.png" alt="Campaña digital industrial" />
-            <div class="project-overlay">
-                <span class="project-tag">CAMPAÑA DIGITAL</span>
-                <h3>Comunicación estratégica industrial</h3>
+            <div class="projects-header">
+                <div class="section-tag">Casos reales</div>
+                <h2>Clientes destacados</h2>
             </div>
-        </article>
 
-        <!-- Proyecto 2 -->
-        <article class="project-card">
-            <img src="projects/proyecto-2.png" alt="Producción audiovisual" />
-            <div class="project-overlay">
-                <span class="project-tag">AUDIOVISUAL</span>
-                <h3>Serie documental corporativa</h3>
+            <div class="projects-grid">
+                <!-- Proyecto 1 -->
+                <article class="project-card">
+                    <img src="projects/proyecto-1.png" alt="Campaña digital industrial" />
+                    <div class="project-overlay">
+                        <span class="project-tag">CAMPAÑA DIGITAL</span>
+                        <h3>Comunicación estratégica industrial</h3>
+                    </div>
+                </article>
+
+                <!-- Proyecto 2 -->
+                <article class="project-card">
+                    <img src="projects/proyecto-2.png" alt="Producción audiovisual" />
+                    <div class="project-overlay">
+                        <span class="project-tag">AUDIOVISUAL</span>
+                        <h3>Serie documental corporativa</h3>
+                    </div>
+                </article>
+
+                <!-- Proyecto 3 -->
+                <article class="project-card">
+                    <img src="projects/proyecto-3.png" alt="Evento sectorial" />
+                    <div class="project-overlay">
+                        <span class="project-tag">EVENTOS</span>
+                        <h3>Encuentro sectorial minero</h3>
+                    </div>
+                </article>
+
+                <!-- Proyecto 4 -->
+                <article class="project-card">
+                    <img src="projects/proyecto-4.png" alt="Editorial corporativa" />
+                    <div class="project-overlay">
+                        <span class="project-tag">EDITORIAL</span>
+                        <h3>Revista técnica especializada</h3>
+                    </div>
+                </article>
+
+                <!-- Proyecto 5 -->
+                <article class="project-card">
+                    <img src="projects/proyecto-5.png" alt="Identidad visual" />
+                    <div class="project-overlay">
+                        <span class="project-tag">BRANDING</span>
+                        <h3>Rediseño de identidad visual</h3>
+                    </div>
+                </article>
+                <!-- Proyecto 6 -->
+                <article class="project-card">
+                    <img src="projects/proyecto-6.png" alt="Identidad visual" />
+                    <div class="project-overlay">
+                        <span class="project-tag">BRANDING</span>
+                        <h3>Rediseño de identidad visual</h3>
+                    </div>
+                </article>
             </div>
-        </article>
 
-        <!-- Proyecto 3 -->
-        <article class="project-card">
-            <img src="projects/proyecto-3.png" alt="Evento sectorial" />
-            <div class="project-overlay">
-                <span class="project-tag">EVENTOS</span>
-                <h3>Encuentro sectorial minero</h3>
+            <div class="projects-cta">
+                <button class="btn btn-tres">Ver todos nuestros proyectos</button>
             </div>
-        </article>
+        </section>
+        <script>
+            const topbar = document.getElementById("topbar");
+            const header = document.getElementById("main-header");
+            const hero = document.getElementById("hero");
 
-        <!-- Proyecto 4 -->
-        <article class="project-card">
-            <img src="projects/proyecto-4.png" alt="Editorial corporativa" />
-            <div class="project-overlay">
-                <span class="project-tag">EDITORIAL</span>
-                <h3>Revista técnica especializada</h3>
-            </div>
-        </article>
+            window.addEventListener("scroll", () => {
+                // Altura total del hero (header completo)
+                const heroBottom = hero.offsetHeight;
 
-        <!-- Proyecto 5 -->
-        <article class="project-card">
-            <img src="projects/proyecto-5.png" alt="Identidad visual" />
-            <div class="project-overlay">
-                <span class="project-tag">BRANDING</span>
-                <h3>Rediseño de identidad visual</h3>
-            </div>
-        </article>
-         <!-- Proyecto 6 -->
-        <article class="project-card">
-            <img src="projects/proyecto-6.png" alt="Identidad visual" />
-            <div class="project-overlay">
-                <span class="project-tag">BRANDING</span>
-                <h3>Rediseño de identidad visual</h3>
-            </div>
-        </article>
-    </div>
-
-    <div class="projects-cta"> 
-        <button class="btn btn-tres">Ver todos nuestros proyectos </button>
-    </div>
-</section>
-
-        
+                if (window.scrollY > heroBottom - 80) {
+                    topbar.classList.add("hide");
+                    header.classList.add("compact");
+                } else {
+                    topbar.classList.remove("hide");
+                    header.classList.remove("compact");
+                }
+            });
+        </script>
     </body>
 </html>
-
