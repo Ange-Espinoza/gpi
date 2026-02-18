@@ -21,6 +21,75 @@ a {
 /* -------------------------
        NAVBAR (Glass)
 ------------------------- */
+
+/* ===============================
+   TOPBAR REDES (EXTRA NAV)
+================================ */
+
+/* ===============================
+   TOPBAR REDES (EXTRA NAV)
+================================ */
+
+.topbar {
+    height: 38px;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+    display: flex;
+    align-items: center;
+
+    transition: all 0.4s ease;
+}
+
+.topbar-inner {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* SOCIAL ICONS */
+.topbar-socials {
+    display: flex;
+    gap: 14px;
+}
+
+.topbar-socials img {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1);
+    opacity: 0.85;
+    transition: 0.25s ease;
+}
+
+.topbar-socials a:hover img {
+    opacity: 1;
+    transform: scale(1.12);
+}
+
+/* EMAIL */
+.topbar-right span {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* ===============================
+   EFECTO COMPRESIÓN HEADER
+================================ */
+
+/* Cuando se oculta */
+.topbar.hide {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    border-bottom: none;
+    transform: translateY(-100%);
+}
+
 header {
     position: fixed;
     top: 0;
@@ -39,6 +108,11 @@ nav {
     margin: 0 auto;
     padding: 0 5%;
     height: 80px;
+    transition: all 0.35s ease;
+}
+
+header.compact nav {
+    height: 65px;
 }
 
 .logo img {
@@ -649,6 +723,10 @@ h3,
         background: linear-gradient(rgba(10, 40, 120, 0.82), rgba(5, 20, 60, 0.92)), url("images/hero-fallback.jpg");
         background-size: cover;
         background-position: center;
+    }
+
+    .topbar {
+        display: none;
     }
 
     .feature-item {
