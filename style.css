@@ -311,8 +311,7 @@ header.compact nav {
 }
 
 .about-left strong {
-    color: #6aa6ff;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .arrow {
@@ -330,6 +329,248 @@ header.compact nav {
         transform: translateY(8px);
     }
 }
+
+/* ========================= */
+/* IMPACTO SECTION */
+/* ========================= */
+
+.impact-section {
+  padding: 120px 6%;
+  background: #ffffff;
+}
+
+.impact-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.impact-tag {
+  display: inline-block;
+  background: #0a49ff;
+  color: white;
+  font-size: 0.75rem;
+  padding: 8px 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+
+.impact-header h2 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.impact-header p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+/* GRID */
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* CARDS */
+
+.impact-card {
+  border: 1px solid #eee;
+  padding: 50px 35px;
+  background: white;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.impact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* Color bar */
+
+.impact-card::before {
+  content: "";
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.impact-card.blue::before {
+  background: #1e5bff;
+}
+
+.impact-card.pink::before {
+  background: #ff4aa2;
+}
+
+.impact-card.orange::before {
+  background: #ff7a00;
+}
+
+/* Numbers */
+
+.impact-card h3 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.impact-card.blue h3 {
+  color: #0a49ff;
+}
+
+.impact-card.pink h3 {
+  color: #ff4aa2;
+}
+
+.impact-card.orange h3 {
+  color: #ff6a00;
+}
+
+.impact-card h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.impact-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* MISIÓN VISIÓN */
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-top: 90px;
+}
+
+.mv-block h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.mv-block p {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .impact-header h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mv-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* DIFERENCIAL SECTION */
+
+.mv-diff {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.mv-diff h3 {
+  font-size: 1.9rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.mv-sub {
+  font-size: 1rem;
+  color: #444;
+  max-width: 650px;
+  margin: 0 auto 35px;
+  line-height: 1.6;
+}
+
+/* GRID DE PILARES */
+
+.diff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+}
+
+/* ITEM */
+
+.diff-item {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 22px;
+  border-radius: 18px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: 0.3s ease;
+}
+
+/* Hover */
+
+.diff-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* Colores */
+
+.diff-item.blue {
+  color: #1e5bff;
+}
+
+.diff-item.orange {
+  color: #ff7a00;
+}
+
+.diff-item.pink {
+  color: #ff3fa6;
+}
+
+/* Hover icon igual que servicios */
+
+.diff-item:hover .service-icon {
+  background: currentColor;
+  border-color: transparent;
+}
+
+.diff-item:hover .service-icon img {
+  filter: brightness(0) invert(1);
+}
+
+/* Texto */
+
+.diff-item span {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
 
 /* -------------------------
        SERVICES SECTION
@@ -366,7 +607,7 @@ header.compact nav {
 }
 
 .section-tag2 {
-    background: #6aa6ff;
+    background: #1e5bff;
     padding: 5px 21px;
     margin-bottom: 28px;
 }
@@ -638,7 +879,7 @@ header.compact nav {
 
 .feature-item:hover {
     background: #f8f9fa;
-    border-left: 3px solid #6aa6ff;
+    border-left: 3px solid #1e5bff;
     padding-left: 40px;
 }
 
@@ -866,6 +1107,78 @@ h3,
     font-weight: 600;
     line-height: 1.3;
 }
+
+/* Pillars */
+
+.pillars-section {
+  margin-top: 90px;
+  text-align: center;
+}
+
+.pillars-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 50px;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.pillar {
+  border: 1px solid #eee;
+  padding: 35px;
+  background: white;
+  transition: 0.3s ease;
+}
+
+.pillar:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.pillar h4 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.pillar p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Mission Vision Icons */
+
+.mv-icon img {
+  width: 45px;
+  margin-bottom: 15px;
+  opacity: 0.85;
+}
+
+/* Responsive pillars */
+
+@media (max-width: 900px) {
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Fade in animation */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* HOVER */
 .project-card:hover img {
