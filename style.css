@@ -601,8 +601,6 @@ h2,
 h3,
 .quienes-somos-card h2,
 .quienes-somos-card h3 {
-    overflow-wrap: break-word;
-    word-wrap: break-word;
     font-size: clamp(24px, 8vw, 40px);
     line-height: 1.2;
     max-width: 100%;
