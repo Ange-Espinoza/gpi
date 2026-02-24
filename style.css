@@ -381,6 +381,7 @@ header.compact nav {
   background: white;
   transition: all 0.3s ease;
   position: relative;
+    border-radius: 0 0 18px 18px;
 }
 
 .impact-card:hover {
@@ -448,7 +449,9 @@ header.compact nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  margin-top: 90px;
+  margin-top: 50px;
+align-items: stretch;
+  flex-grow: 1;
 }
 
 .mv-block h3 {
@@ -566,12 +569,24 @@ header.compact nav {
   color: #6817c5;
 }
 
+.diff-item.blue span {
+  color: black;
+}
+
 .diff-item.orange {
   color: #ff8528;
 }
 
+.diff-item.orange span {
+  color: black;
+}
+
 .diff-item.pink {
   color: #b52dc8;
+}
+
+.diff-item.pink span {
+  color: black;
 }
 
 /* Hover icon igual que servicios */
@@ -676,9 +691,9 @@ header.compact nav {
     min-height: 300px;
     align-items: flex-start;
     transition: 0.3s ease;
+    border-radius: 0 0 18px 18px;
 }
 
-/* FOTO ARRIBA COMO BANNER */
 .service-media {
     width: calc(100% + 70px); /* padding x2 */
     height: 250px;
@@ -1177,6 +1192,7 @@ h3,
   padding: 35px;
   background: white;
   transition: 0.3s ease;
+    border-radius: 18px;
 }
 
 .pillar:hover {
