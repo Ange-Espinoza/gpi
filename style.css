@@ -144,7 +144,7 @@ header.compact nav {
 }
 
 .cta-nav {
-    background: #ff7a00;
+    background: #ff8528;
     padding: 12px 22px;
     border-radius: 12px;
     font-weight: 600;
@@ -212,7 +212,7 @@ header.compact nav {
 }
 
 .hero h1 span {
-    color: #6aa6ff;
+    color: #ffe9aa;
 }
 
 .hero p {
@@ -256,13 +256,13 @@ header.compact nav {
 
 /* BOTÓN PRINCIPAL */
 .btn-primary {
-    background: #ff7a00;
+    background: #ff8528;
     color: white;
 }
 
-/* Hover: pasa a azul marino */
+
 .btn-primary:hover {
-    background: #0a2b70; /* azul marino oscuro */
+    background: #210a57; 
     color: white;
     transform: translateY(-3px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
@@ -271,13 +271,12 @@ header.compact nav {
 /* BOTÓN SECUNDARIO */
 .btn-secondary {
     background: white;
-    color: #0a2b70;
+    color: #210a57;
     border: 1px solid rgba(10, 43, 112, 0.25);
 }
 
-/* Hover: azul marino + texto blanco */
 .btn-secondary:hover {
-    background: #0a2b70; /* azul marino oscuro */
+    background: #210a57; 
     color: white; /* texto blanco */
     transform: translateY(-3px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
@@ -285,14 +284,14 @@ header.compact nav {
 
 /* BOTÓN TERCIARIO */
 .btn-tres {
-    background: #ff7a00;
+    background: #ff8528;
     color: white;
     border: 1px solid rgba(10, 43, 112, 0.25);
 }
 
 /* Hover: azul marino + texto blanco */
 .btn-tres:hover {
-    background: #0a2b70; /* azul marino oscuro */
+    background: #210a57; /* azul marino oscuro */
     color: white; /* texto blanco */
     transform: translateY(-3px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
@@ -346,7 +345,7 @@ header.compact nav {
 
 .impact-tag {
   display: inline-block;
-  background: #0a49ff;
+  background: #6817c5;
   color: white;
   font-size: 0.75rem;
   padding: 8px 16px;
@@ -401,15 +400,15 @@ header.compact nav {
 }
 
 .impact-card.blue::before {
-  background: #1e5bff;
+  background: #6817c5;
 }
 
 .impact-card.pink::before {
-  background: #ff4aa2;
+  background: #b52dc8;
 }
 
 .impact-card.orange::before {
-  background: #ff7a00;
+  background: #ff8528;
 }
 
 /* Numbers */
@@ -421,15 +420,15 @@ header.compact nav {
 }
 
 .impact-card.blue h3 {
-  color: #0a49ff;
+  color: #6817c5;
 }
 
 .impact-card.pink h3 {
-  color: #ff4aa2;
+  color: #b52dc8;
 }
 
 .impact-card.orange h3 {
-  color: #ff6a00;
+  color: #ff8528;
 }
 
 .impact-card h4 {
@@ -509,26 +508,49 @@ header.compact nav {
   line-height: 1.6;
 }
 
-/* GRID DE PILARES */
-
-.diff-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 22px;
-}
-
 /* ITEM */
 
+/* ITEM (Contenedor de cada diferencial) */
 .diff-item {
-  background: #fff;
-  border: 1px solid #eee;
-  padding: 22px;
-  border-radius: 18px;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  transition: 0.3s ease;
+    border: 1px solid #eee;
+    padding: 22px;
+    border-radius: 18px;
+    text-align: left;
+     align-content: center;
+    /* FLEXBOX: Esto alinea el ícono y el texto */
+    display: flex;
+    gap: 18px;           /* Espacio entre el cuadro del ícono y el texto */
+    transition: 0.3s ease;
+    min-height: 90px;    /* Asegura que todas tengan un tamaño similar */
+}
+
+/* CONTENEDOR DEL ICONO (El cuadro redondeado) */
+.diff-item .service-icon {
+    flex-shrink: 0;      /* Evita que el cuadro se deforme si el texto es largo */
+    width: 55px;
+    height: 55px;
+}
+
+.diff-item .service-icon img {
+    width: 26px;
+    height: 26px;
+    display: block;
+}
+
+/* TEXTO */
+.diff-item span {
+     align-content: center;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.3;    /* Reduce un poco el interlineado para que el bloque de texto se vea centrado */
+    margin: 0;           /* Elimina márgenes extra que puedan mover el texto */
+}
+
+/* AJUSTE PARA EL GRID (Opcional) */
+.diff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Aumenté el mínimo para que el texto no se apriete */
+    gap: 22px;
 }
 
 /* Hover */
@@ -541,18 +563,27 @@ header.compact nav {
 /* Colores */
 
 .diff-item.blue {
-  color: #1e5bff;
+  color: #6817c5;
 }
 
 .diff-item.orange {
-  color: #ff7a00;
+  color: #ff8528;
 }
 
 .diff-item.pink {
-  color: #ff3fa6;
+  color: #b52dc8;
 }
 
 /* Hover icon igual que servicios */
+
+.diff-item:hover .service-icon-diff {
+  background: currentColor;
+  border-color: transparent;
+}
+
+.diff-item:hover .service-icon-diff img {
+  filter: brightness(0) invert(1);
+}
 
 .diff-item:hover .service-icon {
   background: currentColor;
@@ -588,7 +619,7 @@ header.compact nav {
 
 .section-tag {
     display: inline-block;
-    background: #1e5bff;
+    background: #6817c5;
     color: white;
     font-size: 13px;
     font-weight: 700;
@@ -607,7 +638,7 @@ header.compact nav {
 }
 
 .section-tag2 {
-    background: #1e5bff;
+    background: #210a57;
     padding: 5px 21px;
     margin-bottom: 28px;
 }
@@ -674,7 +705,7 @@ header.compact nav {
     width: 65px;
     height: 65px;
     border-radius: 16px;
-
+    align-content: center;
     border: 2px solid currentColor;
     background: white;
 
@@ -683,6 +714,20 @@ header.compact nav {
     justify-content: center;
 
     margin-bottom: 22px;
+    transition: 0.3s ease;
+}
+
+.service-icon-diff {
+    width: 55px;
+    height: 55px;
+    border-radius: 16px;
+    align-content: center;
+    border: 2px solid currentColor;
+    background: white;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: 0.3s ease;
 }
 
@@ -736,15 +781,15 @@ header.compact nav {
 
 /* COLORES */
 .service-card.blue {
-    color: #1e5bff;
+    color: #6817c5;
 }
 
 .service-card.pink {
-    color: #ff3fa6;
+    color: #b52dc8;
 }
 
 .service-card.orange {
-    color: #ff7a00;
+    color: #ff8528;
 }
 
 /* Cards grandes */
@@ -879,14 +924,14 @@ header.compact nav {
 
 .feature-item:hover {
     background: #f8f9fa;
-    border-left: 3px solid #1e5bff;
+    border-left: 3px solid #210a57;
     padding-left: 40px;
 }
 
 .feature-icon-box {
     width: 48px;
     height: 48px;
-    background: #1e5bff;
+    background: #210a57;
     color: white;
     display: flex;
     align-items: center;
@@ -1099,7 +1144,7 @@ h3,
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.08em;
-    color: #ff7a00;
+    color: #ff8528;
 }
 
 .project-overlay h3 {
@@ -1213,4 +1258,13 @@ h3,
     .services-header h2 {
         font-size: 32px;
     }
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 10px #4568c7); /* Crea un aura de color */
+    transform: scale(1.1); /* Crece un 10% */
+}
+
+.logo {
+  transition: transform 0.3s ease; /* Hace que el movimiento sea suave */
 }
