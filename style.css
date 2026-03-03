@@ -261,7 +261,7 @@ header.compact nav {
 
 .btn-destac {
     background: linear-gradient(
-        90deg, 
+        270deg,
         rgba(255, 233, 170, 0.8),
         rgba(255, 197, 24, 0.6),
         rgba(181, 45, 200, 0.8),
@@ -271,12 +271,10 @@ header.compact nav {
     border: 1px solid #747474ff;
     color: white;
     background-size: 300% 300%;
-    animation: gradientShift 5s ease infinite;
-    animation-play-state: paused;
+    animation: gradientShift 6s ease infinite;
 }
 
 .btn-destac:hover {
-     animation-play-state: running;
     transform: translateY(-3px);
     box-shadow: 0 12px 30px #00000040;
 }
@@ -291,13 +289,11 @@ header.compact nav {
     border: 1px solid #747474ff;
     color: white;
     background-size: 300% 300%;
-    animation: gradientShift 5s ease infinite;
-    animation-play-state: paused;
+    animation: gradientShift 7s ease infinite;
     padding: 9px 15px;
 }
 
 .btn-destac2:hover {
-     animation-play-state: running;
     transform: translateY(-3px);
     box-shadow: 0 12px 30px #00000040;
 }
@@ -397,7 +393,7 @@ header.compact nav {
 
 .impact-header h2 {
     font-size: 4rem;
-    font-weight: 800;
+    font-weight: 900;
     margin-bottom: 15px;
 }
 
@@ -673,11 +669,11 @@ header.compact nav {
     display: inline-block;
     background: #6817c5;
     color: white;
-    font-size: 13px;
+    font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
-    padding: 12px 22px;
+   padding: 8px 16px;
     margin-bottom: 28px;
 }
 
@@ -1324,15 +1320,16 @@ h3,
 
 .methodology h2 {
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 900;
     margin-bottom: 15px;
 }
 
 .methodology .subtitle {
-    color: #9aa4b2;
-    max-width: 700px;
+    color: #ced7e4;
+    max-width: 600px;
     margin: 0 auto 80px;
     font-size: 1.1rem;
+    font-weight: 400;
 }
 
 /* Steps */
@@ -1417,14 +1414,18 @@ h3,
 .icon-box {
     width: 48px;
     height: 48px; background: linear-gradient(135deg, 
-        rgba(255, 233, 170, 0.8),
+        rgba(255, 233, 170),
         rgba(181, 45, 200, 0.8),
-        rgba(33, 10, 87, 1));
+        rgba(33, 10, 87));
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
     font-size: 1.2rem;
+}
+
+.icon-box img {
+  filter: brightness(0) invert(1);
 }
 
 /* Rombo */
@@ -1447,7 +1448,7 @@ h3,
 }
 
 .step p {
-    color: #b4bdc8;
+     color: #ced7e4;
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 18px;
@@ -1459,8 +1460,8 @@ h3,
 
 .step ul li {
     margin-bottom: 6px;
-    font-size: 0.9rem;
-    color: #9aa4b2;
+    font-size: 0.9rem; 
+    color: #ced7e4;
 }
 
 /* ===============================
