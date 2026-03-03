@@ -1123,7 +1123,7 @@ h3,
 
 .projects {
     padding: 75px 13%;
-    background-color: #ffffff;
+   background: #0c0f14;
 }
 
 .projects-header {
@@ -1135,7 +1135,7 @@ h3,
     font-size: 72px;
     font-weight: 900;
     margin-bottom: 25px;
-    color: black;
+    color: white;
     line-height: 1.05;
 }
 
@@ -1297,7 +1297,7 @@ h3,
 .methodology {
     background: #0c0f14;
     color: #fff;
-    padding: 120px 13%;
+    padding: 90px 13%;
     position: relative;
     overflow: hidden;
 }
