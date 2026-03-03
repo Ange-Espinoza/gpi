@@ -1625,11 +1625,9 @@ h3,
     .cta-title {
         font-size: 40px;
     }
-
     .cta-subtitle {
         font-size: 18px;
     }
-
     .cta-buttons {
         flex-direction: column;
         gap: 20px;
