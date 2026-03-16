@@ -1715,3 +1715,50 @@ h3,
         font-size: 32px;
     }
 }
+
+/*PÁGINA EN CONSTRUCCIÓN */
+.construction{
+    background:black;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.construction-title{
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight:700;
+    color:white;
+
+    position:relative; /* importante */
+
+    opacity:0;
+    transform: translateY(10px);
+    animation: textFade 1s ease forwards;
+}
+
+/* línea */
+.construction-title::after{
+    content:"";
+    display:block;      /* cambia esto */
+    margin:12px auto 0; /* centra la línea */
+    height:2px;
+    width:0;
+    background:#b52dc8;
+    animation: lineGrow 1s ease forwards;
+    animation-delay:.6s;
+}
+
+@keyframes textFade{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes lineGrow{
+    to{
+        width:260px;
+    }
+}
