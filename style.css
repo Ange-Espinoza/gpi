@@ -22,13 +22,6 @@ a {
        NAVBAR (Glass)
 ------------------------- */
 
-/* ===============================
-   TOPBAR REDES (EXTRA NAV)
-================================ */
-
-/* ===============================
-   TOPBAR REDES (EXTRA NAV)
-================================ */
 
 .topbar {
     height: 38px;
@@ -109,6 +102,56 @@ nav {
     padding: 0 5%;
     height: 80px;
     transition: all 0.35s ease;
+}
+
+/* Dropdown contenedor */
+.dropdown {
+    position: relative;
+}
+
+/* Menú oculto por defecto */
+.dropdown-menu {
+    position: absolute;
+    color: black;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    min-width: 220px;
+    padding: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+nav .dropdown-menu a {
+    color: #0f0f0f;
+} 
+
+/* Links internos */
+.dropdown-menu a {
+    display: block;
+    padding: 12px 20px;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+/* Hover interno */
+.dropdown-menu a:hover {
+    background: #d7d7d7;
+    padding-left: 24px;
+}
+
+/* Mostrar menú al hacer hover */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 header.compact nav {
@@ -723,8 +766,10 @@ header.compact nav {
     flex-direction: column;
     min-height: 300px;
     align-items: flex-start;
-    transition: 0.3s ease;
     border-radius: 0 0 18px 18px;
+    cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
 }
 
 .service-media {
@@ -745,7 +790,8 @@ header.compact nav {
 }
 
 .service-card:hover .service-photo img {
-    transform: scale(1.06);
+    transform: translateY(-6px);
+    
 }
 
 /* ICONO BONITO (como sticker) */
@@ -1621,6 +1667,8 @@ h3,
     }
 }
 
+
+
 /* Responsive */
 
 @media (max-width: 1100px) {
@@ -1667,3 +1715,4 @@ h3,
         font-size: 32px;
     }
 }
+
